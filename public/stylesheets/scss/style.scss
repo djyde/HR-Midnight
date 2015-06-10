@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.center{
+  text-align: center;
+}
+
+.container{
+  width: 620px;
+  margin: 0 auto;
+}
+
+.chat{
+
+  overflow: hidden;
+
+  .item{
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+
+  .me{
+    float: right;
+
+    .avatar{
+      width: 38px;
+      height: 38px;
+      background-color: #000;
+      float: right;
+      margin-left: 8px;
+    }
+
+
+    .content{
+      float: left;
+
+      .name{
+        color: #777;
+        margin-top: 1px;
+        margin-bottom: 8px;
+        text-align: right;
+        font-size: .8em;
+      }
+
+      .text{
+        font-size: .9em;
+      }
+    }
+  }
+
+  .other{
+    .avatar{
+      width: 38px;
+      height: 38px;
+      background-color: #000;
+      float: left;
+      margin-right: 8px;
+    }
+
+
+    .content{
+      float: left;
+
+      .name{
+        color: #777;
+        margin-top: 1px;
+        margin-bottom: 8px;
+        font-size: .8em;
+      }
+
+      .text{
+        font-size: .9em;
+      }
+    }
+  }
+
+  
+}
