@@ -1,37 +1,89 @@
+@font-face{
+  font-family: 'kangxi';
+  src: url('../fonts/kangxi.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *{
   margin: 0;
   padding: 0;
+}
+
+body{
+  background-color: rgba(0,0,0,.9);
+  color: #f7f7f7;
+  font-family: "PetalaPro","Helvetica Neue",Helvetica,"Arial","Source Han Sans CN","Hiragino Sans GB","Microsoft YaHei","Microsoft JhengHei",sans-serif;
 }
 
 .center{
   text-align: center;
 }
 
+.main-text{
+  font-family: 'kangxi';
+}
+
+.small{
+  font-size: .8em;
+}
+
+.medium{
+  font-size: 1em;
+}
+
+.large{
+  font-size: 1.2em;
+}
+
+.title{
+  font-size: 3em;
+}
+
 .container{
   width: 620px;
   margin: 0 auto;
+  margin-top: 128px;
+}
+
+.banner{
+  p{
+    margin-bottom: 12px;
+  }
 }
 
 .chat{
-
-  overflow: hidden;
-
+  margin-top: 18px;
   .item{
     margin-bottom: 24px;
     overflow: hidden;
   }
 
+  .me .avatar{
+    float: right;
+    margin-left: 8px;
+    width: 38px;
+    height: 38px;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .other .avatar{
+    float: left;
+    margin-right: 8px;
+    width: 38px;
+    height: 38px;
+    img{
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
   .me{
     float: right;
-
-    .avatar{
-      width: 38px;
-      height: 38px;
-      background-color: #000;
-      float: right;
-      margin-left: 8px;
-    }
-
 
     .content{
       float: left;
@@ -39,7 +91,6 @@
       .name{
         color: #777;
         margin-top: 1px;
-        margin-bottom: 8px;
         text-align: right;
         font-size: .8em;
       }
@@ -51,22 +102,12 @@
   }
 
   .other{
-    .avatar{
-      width: 38px;
-      height: 38px;
-      background-color: #000;
-      float: left;
-      margin-right: 8px;
-    }
-
-
     .content{
       float: left;
 
       .name{
         color: #777;
         margin-top: 1px;
-        margin-bottom: 8px;
         font-size: .8em;
       }
 
@@ -75,6 +116,21 @@
       }
     }
   }
-
   
+}
+
+.send{
+
+  margin-top: 18px;
+
+  input[type="text"]{
+    border: 1px solid #777;
+    background-color: rgba(0,0,0,0.1);
+    color: #f7f7f7;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    font-size: .9em;
+    outline: none;
+  }
 }
