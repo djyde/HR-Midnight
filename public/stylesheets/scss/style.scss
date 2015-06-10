@@ -44,7 +44,7 @@ body{
 .container{
   width: 620px;
   margin: 0 auto;
-  margin-top: 128px;
+  margin-top: 64px;
 }
 
 .banner{
@@ -53,8 +53,14 @@ body{
   }
 }
 
-.chat{
+#chat{
   margin-top: 18px;
+
+  #items{
+    max-height: 415px;
+    overflow: scroll;
+  }
+
   .item{
     margin-bottom: 24px;
     overflow: hidden;
@@ -97,6 +103,7 @@ body{
 
       .text{
         font-size: .9em;
+        text-align: right;
       }
     }
   }
@@ -104,7 +111,6 @@ body{
   .other{
     .content{
       float: left;
-
       .name{
         color: #777;
         margin-top: 1px;
@@ -119,7 +125,7 @@ body{
   
 }
 
-.send{
+#send{
 
   margin-top: 18px;
 

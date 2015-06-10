@@ -7,29 +7,14 @@ block content
     p.main-text 當前
       span  20 
       | 人在綫
-  .chat
-    .item
-      .other
-        .avatar
-          img(src="images/g.png")
-        .content
-          .name 中文
-          .text 有人吗？
-    .item
-      .me
-        .avatar
-          img(src="images/y.png")
-        .content
-          .name 我
-          .text 没有
-    .item
-      .me
-        .avatar
-          img(src="images/m.png")
-
-        .content
-          .name 我
-          .text 没有
-
-  .send
-    input(type="text",placeholder="Press Enter To Send...")
+  #chat
+    #items
+      .item(v-repeat="chat: chats")
+        .other
+          .avatar
+            img(src="images/{{chat.position}}.png")
+          .content
+            .name {{chat.username}}
+            .text {{chat.content}}
+    #send
+      input(v-model="content",v-on="keyup:send | key enter",type="text",placeholder="Press Enter To Send...")

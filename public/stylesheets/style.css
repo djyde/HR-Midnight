@@ -33,55 +33,59 @@ body {
 .container {
   width: 620px;
   margin: 0 auto;
-  margin-top: 128px; }
+  margin-top: 64px; }
 
 .banner p {
   margin-bottom: 12px; }
 
-.chat {
+#chat {
   margin-top: 18px; }
-  .chat .item {
+  #chat #items {
+    max-height: 415px;
+    overflow: scroll; }
+  #chat .item {
     margin-bottom: 24px;
     overflow: hidden; }
-  .chat .me .avatar {
+  #chat .me .avatar {
     float: right;
     margin-left: 8px;
     width: 38px;
     height: 38px; }
-    .chat .me .avatar img {
+    #chat .me .avatar img {
       width: 100%;
       border-radius: 50%; }
-  .chat .other .avatar {
+  #chat .other .avatar {
     float: left;
     margin-right: 8px;
     width: 38px;
     height: 38px; }
-    .chat .other .avatar img {
+    #chat .other .avatar img {
       width: 100%;
       border-radius: 50%; }
-  .chat .me {
+  #chat .me {
     float: right; }
-    .chat .me .content {
+    #chat .me .content {
       float: left; }
-      .chat .me .content .name {
+      #chat .me .content .name {
         color: #777;
         margin-top: 1px;
         text-align: right;
         font-size: .8em; }
-      .chat .me .content .text {
-        font-size: .9em; }
-  .chat .other .content {
+      #chat .me .content .text {
+        font-size: .9em;
+        text-align: right; }
+  #chat .other .content {
     float: left; }
-    .chat .other .content .name {
+    #chat .other .content .name {
       color: #777;
       margin-top: 1px;
       font-size: .8em; }
-    .chat .other .content .text {
+    #chat .other .content .text {
       font-size: .9em; }
 
-.send {
+#send {
   margin-top: 18px; }
-  .send input[type="text"] {
+  #send input[type="text"] {
     border: 1px solid #777;
     background-color: rgba(0, 0, 0, 0.1);
     color: #f7f7f7;
