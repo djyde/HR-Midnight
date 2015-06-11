@@ -14,8 +14,18 @@ if("null"==i.slice(P,P+4))return P+=4,null;q()}return"$"},U=function(t){var e,n;
 
 
 
-!function(){
-  var socket = io(':3000');
+;(function(){
+  var socket = io();
+
+  Vue.directive('scroll',{
+    update: function(value){
+      this.el.scrollTop = 10000;
+      console.log(this.el.scrollHeight,this.el.scrollTop);
+    },
+    unbind: function(){
+      console.log('unbind')
+    }
+  })
 
   var chat = new Vue({
     el: '#chat',
@@ -36,7 +46,9 @@ if("null"==i.slice(P,P+4))return P+=4,null;q()}return"$"},U=function(t){var e,n;
     }
   })
 
+  
+
   socket.on('message',function(newChat){
     chat.chats.push(newChat);
   })
-}();
+})();

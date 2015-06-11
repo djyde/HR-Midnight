@@ -8,7 +8,7 @@ block content
       span  20 
       | 人在綫
   #chat
-    #items
+    #items(v-scroll="chats")
       .item(v-repeat="chat: chats")
         .other
           .avatar

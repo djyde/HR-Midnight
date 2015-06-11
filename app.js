@@ -16,7 +16,7 @@ var io = require('socket.io')(http);
 io.on('connection',function(socket){
   socket.on('message',function(chat){
     var ip = socket.handshake.address.replace('::ffff:','');
-    console.log(ip)
+    chat.position = 'g' //TODO ip position
     socket.emit('message',chat);
   })
 })

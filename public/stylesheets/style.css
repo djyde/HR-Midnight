@@ -41,8 +41,8 @@ body {
 #chat {
   margin-top: 18px; }
   #chat #items {
-    max-height: 415px;
-    overflow: scroll; }
+    height: 415px;
+    overflow: auto; }
   #chat .item {
     margin-bottom: 24px;
     overflow: hidden; }
